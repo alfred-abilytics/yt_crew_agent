@@ -1,0 +1,9 @@
+fastapi>=0.68.0
+uvicorn>=0.15.0
+youtube-transcript-api>=0.6.1
+reportlab>=4.0.0
+crewai>=0.28.8
+crewai-tools>=0.1.3
+langchain>=0.0.200
+google-generativeai>=0.3.0
+python-dotenv>=1.0.0

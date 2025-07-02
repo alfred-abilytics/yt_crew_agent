@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Bot - AI-Powered Video Analysis</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=4">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>YouTube Transcript Bot</h1>
+                </div>
+                <p class="subtitle">Extract transcripts, generate PDFs, and chat with AI about any YouTube video</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Transcript Section -->
+            <section class="transcript-section">
+                <div class="section-header">
+                    <i class="fas fa-file-alt"></i>
+                    <h2>Generate Transcript</h2>
+                </div>
+                <div class="input-group">
+                    <div class="url-input-container">
+                        <i class="fas fa-link"></i>
+                        <input type="text" id="youtubeUrl" placeholder="Paste YouTube URL here..." class="url-input">
+                    </div>
+                    <button onclick="generateTranscript()" class="btn btn-primary" id="generateBtn">
+                        <i class="fas fa-magic"></i>
+                        Generate Transcript
+                    </button>
+                </div>
+                <div id="pdfDownload" class="pdf-download"></div>
+                <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Processing video transcript...</p>
+                </div>
+            </section>
+
+            <!-- Chat Section -->
+            <section class="chat-section">
+                <div class="section-header">
+                    <i class="fas fa-comments"></i>
+                    <h2>AI Chat Assistant</h2>
+                </div>
+                
+                <!-- Welcome Message (outside chat container) -->
+                <div id="welcomeMessage" class="welcome-message-container">
+                    <div class="welcome-message">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Generate a transcript first, then ask me anything about the video content!</p>
+                    </div>
+                </div>
+                
+                <div class="chat-container">
+                    <div id="chatMessages" class="chat-messages">
+                        <!-- Chat messages will be added here dynamically -->
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="input-group">
+                            <input type="text" id="userInput" placeholder="Ask about the video content..." class="chat-input">
+                            <button onclick="sendMessage()" class="btn btn-secondary" id="sendBtn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 YouTube Transcript Bot. Powered by AI and CrewAI.</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js?v=3"></script>
+</body>
+</html>
